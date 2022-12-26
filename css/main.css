@@ -1,0 +1,171 @@
+body {
+    color: #fff;
+    background: #000;
+}
+
+.inner {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+* {
+    outline: 1px solid t-omato;
+}
+
+/* 세팅 css */
+
+.header {
+    line-height: 120px;
+
+}
+
+.header .inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.header h1 img {
+    height: 60%;
+}
+
+.header ul {
+    gap: 50px;
+}
+
+/* header */
+.mainVisual {
+    position: relative;
+    height: calc(150vh + 100px);
+    overflow: hidden;
+    font-size: 24px;
+}
+
+.mainVisual .visual_video {
+    position: relative;
+    width: 100%;
+}
+
+.mainVisual .visual_video::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(0deg, black 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.mainVisual .visual_txt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mainVisual .visual_txt h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* transform: translate(0, -50%); */
+
+    font-size: 120px;
+    font-weight: 900;
+    /* background: linear-gradient(#f1d68f 40%, #fff 60%, #f1d68f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.mainVisual .visual_txt h2 span {
+    font-size: 100px;
+}
+
+.mainVisual .visual_txt strong {
+    position: absolute;
+    top: 100vh;
+    right: 0;
+
+    font-size: 80px;
+    line-height: 1.6;
+}
+
+.mainVisual .visual_txt strong em {
+    display: block;
+    font-weight: 700;
+}
+
+.mainVisual .visual_txt p {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+
+/* main visual */
+/* .mainContent {
+    position: relative;
+    overflow: hidden;
+}
+
+.mainContent .content_video {
+    overflow: hidden;
+    height: 80vh;
+}
+
+.mainContent .content_video video {
+    transform: translate(-400px, 0);
+    filter: grayscale(1);
+}
+
+.mainContent .content_video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 850px;
+    background: url(../img/mainContent_bg.jpg);
+    z-index: 998;
+}
+
+.mainContent .img_slide_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.mainContent .img_slide_wrap figure {
+    position: relative;
+    height: 580px;
+}
+
+.mainContent .img_slide_wrap figure img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainContent .txt_slide_wrap {
+    position: absolute;
+    top: 50%;
+    right: -550px;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+} */

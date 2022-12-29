@@ -1,4 +1,23 @@
 $(function () {
+    $('.scroll_down down').on('click', function (event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+    })
+
+    // $('#toTop').on('click', function () {
+    //     $('html, body').animate({ scrollTop: 0 }, 1000)
+    // })
+
+
+    $(window).on('scroll', function () {
+        var sct = $(window).scrollTop();
+        if (sct > 0) {
+            $('.scroll_down').fadeOut();
+        } else {
+            $('.scroll_down').fadeIn();
+        }
+    })
+
     $('.product_slide').on('init afterChange', function (event, slick, currentSlide) {
         var current = $('.product_slide .slick-current');
         current.addClass('on').siblings().removeClass('on');

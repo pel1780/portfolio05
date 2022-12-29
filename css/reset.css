@@ -39,3 +39,7 @@ em,
 address {
     font-style: normal;
 }
+
+button {
+    font-family: 'Noto Serif KR', serif;
+}

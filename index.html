@@ -30,6 +30,9 @@
                     <li><a href="">가맹문의</a></li>
                 </ul>
             </div>
+            <div class="to_top">
+                <button><i class="xi-angle-top">top</i></button>
+            </div>
         </header>
         <main>
             <section class="mainVisual">
@@ -37,10 +40,13 @@
                     <video autoplay muted loop playsinline src="./img/mainVisual.mp4"></video>
                 </div>
                 <div class="visual_txt inner">
-                    <h2>Choi<span>Food</span></h2>
+                    <h2 id="mv">Choi<span>Food</span></h2>
                     <strong>소울(soul)을<em>담은 "도시갈비"</em></strong>
                     <p>행복한 기억을 드리고 싶은 소울푸드 <br />
                         시대를 이끌어갈 갈비 이야기 "도시갈비"</p>
+                </div>
+                <div class="scroll_down">
+                    <a href="#mv" class="down"><button>scroll down</button></a>
                 </div>
             </section>
             <section class="mainProduct sec">
@@ -120,6 +126,12 @@
                 <div class="content_funny con" data-parallax="scroll" data-image-src="./img/mainContent_bg03.jpg">
                 </div>
             </section>
+            <section class="mainBrand sec">
+                <div class="inner">
+                    <h2>첫번째 이야기<em class="main_color">도시갈비</em></h2>
+                    <span>도전하지 않는 자체가<em>제일 큰 실패</em></span>
+                </div>
+            </section>
             <section class="mainBanner sec">
                 <h2 class="main_color">Franchise</h2>
                 <p>도시갈비는 가맹점 수를 늘리기 위한 가맹점을 출점하지 않습니다. <br />
@@ -128,7 +140,41 @@
             </section>
         </main>
         <footer class="footer">
-
+            <div class="inner">
+                <div class="foot_top">
+                    <ul class="flex">
+                        <li><strong>부천 중동 현대 본점</strong>
+                            <ul>
+                                <li>Address : 경기 부천시 석천로177번길 29 뉴월드프라자 3층</li>
+                                <li>Tel : 032-321-5556</li>
+                                <li>Open : 매일 11:30 - 00:00</li>
+                            </ul>
+                        </li>
+                        <li><strong>시흥 배곧 한라점</strong>
+                            <ul>
+                                <li>Address : 경기 시흥시 배곧1로 27-16</li>
+                                <li>Tel : 031-365-4327</li>
+                                <li>Open : 매일 16:00 - 22:00</li>
+                            </ul>
+                        </li>
+                        <li><strong>논현 에코점</strong>
+                            <ul>
+                                <li>Address : 인천광역시 남동구 에코중앙로156번길 14 1층</li>
+                                <li>Tel : 032-431-9211</li>
+                                <li>Open : 평일 16:00 - 23:00 / 주말 12:00 - 22:00</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot_btm flex">
+                    <span>&copy; 2022 도시갈비. ALL RIGHTS RESERVED.</span>
+                    <ul class="flex">
+                        <li>최푸드(주)</li>
+                        <li>경기도 부천시 석천로 177번길 29</li>
+                        <li>대표: 최현철</li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </div>
 </body>

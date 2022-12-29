@@ -18,7 +18,7 @@ body {
 }
 
 * {
-    outline: 1px solid tom-ato;
+    outline: 1px solid t-omato;
 }
 
 .main_color {
@@ -91,11 +91,12 @@ body {
 
 .mainVisual .visual_txt h2 {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
 
     font-size: 120px;
     font-weight: 900;
+    padding-top: 50px;
 }
 
 .mainVisual .visual_txt h2 span {
@@ -120,6 +121,18 @@ body {
     position: absolute;
     bottom: 100px;
     left: 0;
+}
+
+.mainVisual .scroll_down {
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+
+.mainVisual .scroll_down button {
+    background: transparent;
+    border: none;
 }
 
 /* main visual */
@@ -289,8 +302,73 @@ body {
     display: none;
 }
 
+.mainContent::after {
+    content: "";
+    position: absolute;
+    bottom: -118vh;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background: linear-gradient(transparent 33%, #000 66%, transparent 100%);
+    z-index: 999;
+}
 
 /* main content */
+.mainBrand {
+    position: relative;
+    background: url(../img/brand_bg.jpg)no-repeat center center/cover;
+    font-size: 80px;
+    text-shadow: 0 0 1px #333;
+    height: 80vh;
+    line-height: 1.4;
+}
+
+.mainBrand::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.mainBrand::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 70%, #000 100%);
+    z-index: 998;
+}
+
+.mainBrand h2 {
+    position: relative;
+    font-size: 50px;
+    text-align: right;
+    margin-bottom: 200px;
+    z-index: 999;
+}
+
+.mainBrand h2 em {
+    font-size: 60px;
+    text-shadow: none;
+}
+
+.mainBrand em {
+    display: block;
+    font-weight: 700;
+}
+
+.mainBrand span {
+    position: relative;
+    z-index: 999;
+}
+
+/* main brand */
 
 .mainBanner {
     text-align: center;
@@ -300,6 +378,7 @@ body {
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 30px;
+
 }
 
 .mainBanner p {
@@ -314,3 +393,62 @@ body {
     color: #f1d68f;
     border-bottom: 1px solid #f1d68f;
 }
+
+/* main banner */
+
+.footer {
+    background: #111;
+}
+
+.footer .foot_top {
+    margin-bottom: 30px;
+}
+
+.footer .inner {
+    padding: 50px 0;
+}
+
+.footer .foot_top>ul {
+    margin-left: -15px;
+}
+
+.footer .foot_top ul>li {
+    flex: 1;
+
+    padding: 0 15px;
+}
+
+.footer .foot_top>ul>li~li {
+    border-left: 1px solid #666;
+}
+
+.footer .foot_top strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.footer .foot_top ul>li>ul>li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.footer .foot_btm {
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.footer .foot_btm li~li::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 10px;
+    background: #666;
+}
+
+/* footer */

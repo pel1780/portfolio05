@@ -136,17 +136,17 @@
                 <div class="content_funny con" data-parallax="scroll" data-image-src="./img/mainContent_bg03.jpg">
                 </div>
             </section>
-            <section class="mainBrand sec">
-                <div class="inner">
-                    <h2>첫번째 이야기<em class="main_color">도시갈비</em></h2>
-                    <span>도전하지 않는 자체가<em>제일 큰 실패</em></span>
-                </div>
-            </section>
             <section class="mainBanner sec">
                 <h2 class="main_color">Franchise</h2>
                 <p>도시갈비는 가맹점 수를 늘리기 위한 가맹점을 출점하지 않습니다. <br />
                     가맹점만 늘려 본사만 커지는 회사를 운영하지 않습니다.</p>
                 <a href="">더보기</a>
+            </section>
+            <section class="mainBrand sec">
+                <div class="inner">
+                    <h2>첫번째 이야기<em class="main_color">도시갈비</em></h2>
+                    <span>도전하지 않는 자체가<em>제일 큰 실패</em></span>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -186,10 +186,83 @@
                 </div>
             </div>
         </footer>
-        <!-- <script src="./js/smooth-scrollbar.js"></script>
+        <!-- <script src="./js/TweenMax.min.js"></script>
         <script>
-            var Scrollbar = window.Scrollbar;
-            Scrollbar.init(document.querySelector('.Wrap'));
+            var html = document.documentElement;
+            var body = document.body;
+
+            var scroller = {
+                target: document.querySelector(".Wrap"),
+                ease: 0.05, // <= scroll speed
+                endY: 0,
+                y: 0,
+                resizeRequest: 1,
+                scrollRequest: 0,
+            };
+
+            var requestId = null;
+
+            TweenLite.set(scroller.target, {
+                rotation: 0.01,
+                force3D: true
+            });
+
+            window.addEventListener("load", onLoad);
+
+            function onLoad() {
+                updateScroller();
+                window.focus();
+                window.addEventListener("resize", onResize);
+                document.addEventListener("scroll", onScroll);
+            }
+
+            function updateScroller() {
+
+                var resized = scroller.resizeRequest > 0;
+
+                if (resized) {
+                    var height = scroller.target.clientHeight;
+                    body.style.height = height + "px";
+                    scroller.resizeRequest = 0;
+                }
+
+                var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
+
+                scroller.endY = scrollY;
+                scroller.y += (scrollY - scroller.y) * scroller.ease;
+
+                if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
+                    scroller.y = scrollY;
+                    scroller.scrollRequest = 0;
+                }
+
+                TweenLite.set(scroller.target, {
+                    y: -scroller.y
+                });
+
+                requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
+            }
+
+            function onScroll() {
+                scroller.scrollRequest++;
+                if (!requestId) {
+                    requestId = requestAnimationFrame(updateScroller);
+                }
+            }
+
+            function onResize() {
+                scroller.resizeRequest++;
+                if (!requestId) {
+                    requestId = requestAnimationFrame(updateScroller);
+                }
+            }
+
+
+            AOS.init();
+
+            $(window).on('scroll', function () {
+                console.log($(window).scrollTop())
+            })
         </script> -->
     </div>
 </body>

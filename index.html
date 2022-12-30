@@ -12,6 +12,7 @@
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/parallax.min.js"></script>
+
     <script src="./js/main.js?ver=1.0"></script>
 </head>
 
@@ -31,7 +32,7 @@
                 </ul>
             </div>
             <div class="to_top">
-                <button><i class="xi-angle-top">top</i></button>
+                <button class="btn_o"><i class="xi-angle-up"></i>top</button>
             </div>
         </header>
         <main>
@@ -46,7 +47,7 @@
                         시대를 이끌어갈 갈비 이야기 "도시갈비"</p>
                 </div>
                 <div class="scroll_down">
-                    <a href="#mv" class="down"><button>scroll down</button></a>
+                    <a href="#mv" class="down"><button class="btn_o">scroll down</button></a>
                 </div>
             </section>
             <section class="mainProduct sec">
@@ -80,6 +81,15 @@
                             </div>
                         </figure>
                     </div>
+                    <div class="controller">
+                        <div class="slide_bar">
+                            <span></span>
+                        </div>
+                        <div class="play">
+                            <button class="btn_o"><i class="xi-play"></i></button>
+                            <button class="btn_o"><i class="xi-pause"></i></button>
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -91,9 +101,9 @@
                                 <li class="main_color">New rib</li>
                                 <li>도시갈비의 시그니처메뉴 <br />
                                     LA갈비는 다릅니다. <br />
-                                    보통의 LA갈비는 간장을 사용하여 <br class="mob" />
+                                    보통의 LA갈비는 간장을 사용하여 <br />
                                     맛을 내지만 <br />
-                                    자사의 LA갈비는 간장을 사용하지 않아 <br class="none" />
+                                    자사의 LA갈비는 간장을 사용하지 않아 <br />
                                     마블링과 육류 본연의 색을 <br />
                                     보실 수 있으며 맛 또한 <br />
                                     새롭습니다.</li>
@@ -176,6 +186,11 @@
                 </div>
             </div>
         </footer>
+        <!-- <script src="./js/smooth-scrollbar.js"></script>
+        <script>
+            var Scrollbar = window.Scrollbar;
+            Scrollbar.init(document.querySelector('.Wrap'));
+        </script> -->
     </div>
 </body>
 

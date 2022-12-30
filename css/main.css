@@ -1,7 +1,12 @@
 body {
     color: #fff;
     background: #000;
+    overflow: auto;
 }
+
+/* .Wrap {
+    height: 100vh;
+} */
 
 .inner {
     width: 1260px;
@@ -27,7 +32,18 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.btn_o {
+    background: transparent;
+    border: none;
+    outline: none;
+    line-height: 1;
+    cursor: pointer;
+}
+
 /* 세팅 css */
+html {
+    scroll-behavior: smooth;
+}
 
 .header {
     line-height: 120px;
@@ -56,6 +72,19 @@ body {
 .header ul a {
     display: block;
     padding: 0 30px;
+}
+
+.header .to_top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.header .to_top i {
+    display: block;
 }
 
 /* header */
@@ -91,7 +120,7 @@ body {
 
 .mainVisual .visual_txt h2 {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 0;
 
     font-size: 120px;
@@ -130,11 +159,6 @@ body {
     transform: translate(-50%, 100%);
 }
 
-.mainVisual .scroll_down button {
-    background: transparent;
-    border: none;
-}
-
 /* main visual */
 
 .mainProduct {
@@ -147,6 +171,10 @@ body {
     color: #fff;
     letter-spacing: 2px;
     margin-bottom: 40px;
+}
+
+.mainProduct .inner {
+    position: relative;
 }
 
 .mainProduct .product_slide figure {
@@ -217,6 +245,39 @@ body {
 
 .mainProduct .product_slide figure.on .txt_box a {
     transition: 0.5s 0.4s;
+}
+
+.mainProduct .controller {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+}
+
+.mainProduct .controller .play {
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.mainProduct .slide_bar {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    width: 420px;
+    vertical-align: 11px;
+}
+
+.mainProduct .slide_bar span {
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+}
+
+.mainProduct .slide_bar.on span {
+    width: 100%;
+    background: #fff;
+    transition: 2.5s;
 }
 
 /* main product */
